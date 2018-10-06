@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-flask
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  rules:
+  - host: www.jordantest.ddnsfree.com
+    http:
+      paths:
+      - backend:
+          serviceName: my-flask
+          servicePort: 5000

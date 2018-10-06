@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-flask
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-flask
+  template:
+    metadata:
+      name: my-flask
+      labels:
+        app: my-flask
+    spec:
+      containers:
+      - name: my-flask
+        image: ${IMAGE}:${TAG}
+        resources:
+          requests:
+            cpu: "10m"
+      nodeSelector:
+        node_type: default
