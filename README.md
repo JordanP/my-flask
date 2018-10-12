@@ -31,3 +31,8 @@ curl -H "X-Sqreen-Integrity: 17f9ba1af1646521d786943433ddb35415ae2cc40182e9196f1
 
 ## API
 This app has a single route `'/'` that should be the target for the Webhook.
+
+## Note:
+I know I shouldn't have commited + push the sqreen.ini file. I should have used an ENV variable
+but I wasn't sure how you would test this and didn't want to put burden on you to
+come up with your own sqreen key. 
